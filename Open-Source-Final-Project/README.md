@@ -1,2 +1,2 @@
 # Open-Source-Final-Project
-Website
+Blog Website
