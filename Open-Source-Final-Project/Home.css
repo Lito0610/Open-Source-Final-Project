@@ -144,7 +144,7 @@ body {
 }
 
 .hero {
-    background-color: #b8f5c2;
+    background-color: #ffffff;
     height: calc(100vh - 60px);
     display: flex;
     align-items: center;
