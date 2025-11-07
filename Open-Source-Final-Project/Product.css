@@ -13,7 +13,7 @@ body {
 /* Navbar styles */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     background-color: #447454;
     padding: 10px 20px;

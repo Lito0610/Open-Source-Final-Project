@@ -9,6 +9,8 @@
 	<!-- Keep site navbar/footer theme (for shared styles) then page overrides -->
 	<link rel="stylesheet" href="Home.css">
 	<link rel="stylesheet" href="Account.css">
+	<link rel="stylesheet" href="Cart.css">
+	<script src="js/cart.js"></script>
 </head>
 <body>
 	<!-- optional site navbar — keeps navigation consistent with other pages -->
@@ -27,12 +29,15 @@
 				<input type="search" placeholder="Search..." aria-label="Search">
 			</div>
 			<a href="Cart.html" class="add-cart" aria-label="View cart">
-				<svg width="27" height="27" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M6 6H4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M6 6L7.2 12.6C7.36 13.36 8 14 8.78 14H17.22C18 14 18.64 13.36 18.8 12.6L20 8H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-					<circle cx="10" cy="19" r="1" fill="white"/>
-					<circle cx="17" cy="19" r="1" fill="white"/>
-				</svg>
+				<div class="cart-container">
+					<svg width="27" height="27" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6 6H4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M6 6L7.2 12.6C7.36 13.36 8 14 8.78 14H17.22C18 14 18.64 13.36 18.8 12.6L20 8H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<circle cx="10" cy="19" r="1" fill="white"/>
+						<circle cx="17" cy="19" r="1" fill="white"/>
+					</svg>
+					<span class="cart-count">0</span>
+				</div>
 			</a>
 
 			<div class="account">
@@ -53,7 +58,7 @@
 				<p class="subtitle">Log in to your account.</p>
 			</header>
 
-			<form class="signin-form" action="Home.html" method="post">
+			<form class="signin-form" action="Home.html">
 				<label class="field">
 					<span class="field-label">Email Address</span>
 					<input type="email" name="email" placeholder="you@example.com" required>
@@ -94,12 +99,11 @@
 		</section>
 	</main>
 
-	<footer class="site-footer" aria-label="Site footer">
-		<div class="footer-inner">
-			<div class="footer-col"><h4>About Us</h4><p>We curate plants and care tips for every space.</p></div>
-			<div class="footer-col"><h4>Follow Us</h4><ul><li>Instagram</li><li>Facebook</li></ul></div>
-		</div>
-	</footer>
+	<footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Plant Grabber. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
 </html>

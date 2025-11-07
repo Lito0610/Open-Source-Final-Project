@@ -6,6 +6,8 @@
 	<title>Cart - Plant Grabber</title>
 	<link rel="stylesheet" href="Home.css">
 	<link rel="stylesheet" href="Cart.css">
+	<script src="js/cart.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 	<nav class="navbar">
@@ -28,12 +30,15 @@
 			</div>
 
 			<a href="Cart.html" class="add-cart active" aria-label="View cart">
-				<svg width="27" height="27" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M6 6H4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M6 6L7.2 12.6C7.36 13.36 8 14 8.78 14H17.22C18 14 18.64 13.36 18.8 12.6L20 8H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-					<circle cx="10" cy="19" r="1" fill="white"/>
-					<circle cx="17" cy="19" r="1" fill="white"/>
-				</svg>
+				<div class="cart-container">
+					<svg width="27" height="27" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6 6H4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M6 6L7.2 12.6C7.36 13.36 8 14 8.78 14H17.22C18 14 18.64 13.36 18.8 12.6L20 8H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<circle cx="10" cy="19" r="1" fill="white"/>
+						<circle cx="17" cy="19" r="1" fill="white"/>
+					</svg>
+					<span class="cart-count">0</span>
+				</div>
 			</a>
 
 			<div class="account">
@@ -47,13 +52,13 @@
 		</div>
 	</nav>
 
-	<main style="padding:100px 20px; max-width:1000px; margin:0 auto;">
-	  <h1>Your Cart</h1>
-	  <p>The cart is currently empty. Add products from the Product page.</p>
-	</main>
-
-			<!-- Active states are set via HTML classes on each page (no JS) -->
-
+    <main class="cart-content">
+        <h1>Your Shopping Cart</h1>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+    </main>
+	    
 </body>
 </html>
 

@@ -6,6 +6,7 @@ body {
     box-sizing: border-box;
     line-height: 1.6;
     color: #333;
+    background-color: whitesmoke;
 }
 
 .navbar {
@@ -144,7 +145,7 @@ body {
 }
 
 .hero {
-    background-color: #ffffff;
+    background-color: whitesmoke;
     height: calc(100vh - 60px);
     display: flex;
     align-items: center;
@@ -231,7 +232,7 @@ body {
 
 /* Product showcase */
 .product-showcase {
-    background-color: #b8f5c2;
+    background-color: whitesmoke;
     padding: 56px 20px;
     min-width: 1200px; /* Force minimum width */
 }
@@ -435,12 +436,11 @@ body {
 /* When the hidden checkbox is checked, change stroke + fill to red */
 .like-toggle:checked + .like-label svg path { stroke: red; fill: red; }
 
-
-
-/* Footer placeholders */
-.site-footer { background: #f2f6f0; padding: 28px 20px; }
-.site-footer .footer-inner { width:1200px; margin:0 auto; display:flex; gap:30px; justify-content:space-between; }
-.footer-col { flex:1 1 0; }
-.footer-col h4 { font-family: Georgia, 'Times New Roman', serif; margin:0 0 8px; }
-.footer-col p, .footer-col ul { color:#3a5540; margin:0; }
+footer {
+    background-color: #447454;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
 
