@@ -25,8 +25,13 @@ function updateCartDisplay() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     
     if (cart.length === 0) {
-        cartContainer.innerHTML = '<p>The cart is currently empty. Add products from the Product page.</p>';
+        // mark container as empty so CSS can center the message
+        cartContainer.classList.add('empty');
+        cartContainer.innerHTML = '<p class="empty-message">Your cart is empty. Add products from the Product page.</p>';
         return;
+    } else {
+        // ensure empty state class removed when items exist
+        cartContainer.classList.remove('empty');
     }
 
     let total = 0;

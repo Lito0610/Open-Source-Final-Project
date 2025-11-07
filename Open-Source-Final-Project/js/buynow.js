@@ -34,11 +34,14 @@ function loadBuyNowProduct() {
         total += subtotal;
         return `
         <div class="product-summary">
-            <img src="${p.image || 'images/cactus.jpg'}" alt="${p.name || 'Product'}">
+            <img src="${p.image || 'images/cactus.jpg'}" alt="${p.name || 'Product'}" loading="lazy">
             <div class="pinfo">
-                <h3>${p.name || 'Product'}</h3>
+                <h3 title="${p.name || 'Product'}">${p.name || 'Product'}</h3>
                 <p>${p.description || ''}</p>
-                <p style="margin-top:8px; font-weight:600;">$${price.toFixed(2)} x ${p.quantity}</p>
+                <p style="margin-top:10px; font-weight:600; color:#2d5d3b;">
+                    $${price.toFixed(2)} × ${p.quantity}
+                    <span style="margin-left:8px; color:#447454;">= $${subtotal.toFixed(2)}</span>
+                </p>
             </div>
         </div>
         `;

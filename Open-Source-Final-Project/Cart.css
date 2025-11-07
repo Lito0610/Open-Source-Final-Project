@@ -1,5 +1,124 @@
 
 
+/* Base styles */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 60px;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7f5;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #447454;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    position: relative;
+    border-radius: 4px;
+    transition: all 0.35s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scaleX(0);
+    transition: transform 0.35s ease;
+    transform-origin: right;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    padding-right: 10px;
+}
+
+.search input {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 15px;
+}
+
+.add-cart, .account a {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.add-cart:hover, .account a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
 .add-cart .cart-container {
     position: relative;
     display: inline-flex;
@@ -74,6 +193,28 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+/* Empty state: center the message without changing product layout */
+.cart-items.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px; /* ensures vertical centering space */
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.cart-items.empty .empty-message {
+    background: linear-gradient(145deg,#ffffff,#f1f7f1);
+    color: #2d5d3b;
+    padding: 24px 28px;
+    border-radius: 12px;
+    border: 1px solid rgba(68,116,84,0.08);
+    box-shadow: 0 8px 18px rgba(15,40,20,0.06);
+    font-size: 1.05rem;
+    text-align: center;
+    max-width: 560px;
 }
 
 .cart-item {
