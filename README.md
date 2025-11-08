@@ -23,9 +23,6 @@ The following files/folders are present in the project root (short descriptions)
 - `js/cart.js` — Cart logic: add/remove items, update cart count, prepare checkout payload
 - `js/buynow.js` — Populates `BuyNow.html` with selected product(s) and handles simple checkout UI
 
-Notes:
-- At the time of this README update there is no dedicated `dark-theme.css` or `theme-toggle.js` in the repo root; if you add a dark theme or toggle later, document its filename here.
-
 ## Cart & checkout behavior
 
 - Cart items are stored in `localStorage` under the `cart` key as an array of product objects (each object typically contains `name`, `price`, `image`, and `description`).
