@@ -34,7 +34,14 @@ body{
     padding: 28px;
     box-shadow: 0 12px 30px rgba(20,35,20,0.08);
     box-sizing: border-box;
-    background-color: #8ED5A5;
+    border: 2px solid transparent; /* thinner reserved border to prevent layout shift */
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 160ms ease;
+}
+
+.login-card:hover{
+    border-color: var(--accent);
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(20,35,20,0.12);
 }
 
 .card-header{ text-align:center; margin-bottom:18px; }
@@ -91,20 +98,20 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(47,93,55,0.12); outl
     margin: 100px auto 48px; /* account for fixed navbar */
     padding: 28px;
     border-radius: 12px;
-    background-color: #8ED5A5;
+    background-color: var(--card);
     box-shadow: 0 10px 24px rgba(15,40,20,0.06);
 }
 
 .login-container h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #134725;
+    color: var(--accent-strong);
 }
 
 .login-container label {
     display: block;
     margin-bottom: 8px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .login-container input[type="text"],
@@ -113,15 +120,16 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(47,93,55,0.12); outl
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #e6ebe6;
+    border-radius: 8px;
     box-sizing: border-box;
+    background: #fbfdfb;
 }
 
 .login-container button {
     width: 100%;
     padding: 12px 14px;
-    background-color: #2f5d37;
+    background-color: var(--accent);
     color: white;
     border: none;
     border-radius: 999px;
@@ -131,7 +139,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(47,93,55,0.12); outl
 }
 
 .login-container button:hover {
-    background-color: #376a3f;
+    background-color: var(--accent-strong);
 }
 
 .login-container .signup-link {
@@ -140,7 +148,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(47,93,55,0.12); outl
 }
 
 .login-container .signup-link a {
-    color: #134725;
+    color: var(--accent-strong);
     text-decoration: none;
 }
 
@@ -152,7 +160,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(47,93,55,0.12); outl
     display: block;
     text-align: center;
     margin-top: 10px;
-    color: #134725;
+    color: var(--accent-strong);
     text-decoration: none;
 }
 
