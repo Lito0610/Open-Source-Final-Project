@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Grabber - Products</title>
+    <link rel="stylesheet" href="Product.css">
+    <link rel="stylesheet" href="Cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/cart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="Home.html">Plant Grabber</a>
+        </div>
+
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="Product.html" class="active">Product</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <div class="search">
+                <input type="search" placeholder="Search..." aria-label="Search">
+            </div>
+
+            <a href="Cart.html" class="add-cart" aria-label="View cart">
+                <div class="cart-container">
+                    <svg width="27" height="27" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6H4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L7.2 12.6C7.36 13.36 8 14 8.78 14H17.22C18 14 18.64 13.36 18.8 12.6L20 8H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="10" cy="19" r="1" fill="white"/>
+                        <circle cx="17" cy="19" r="1" fill="white"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </div>
+            </a>
+
+            <div class="account">
+                <a href="Account.html" class="Account" aria-label="Account">
+                    <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 20.25C4.5 19.0565 4.97411 17.9119 5.81802 17.068C6.66193 16.2241 7.80653 15.75 9 15.75H18C19.1935 15.75 20.3381 16.2241 21.182 17.068C22.0259 17.9119 22.5 19.0565 22.5 20.25C22.5 20.8467 22.2629 21.419 21.841 21.841C21.419 22.2629 20.8467 22.5 20.25 22.5H6.75C6.15326 22.5 5.58097 22.2629 5.15901 21.841C4.73705 21.419 4.5 20.8467 4.5 20.25Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M13.5 11.25C15.364 11.25 16.875 9.73896 16.875 7.875C16.875 6.01104 15.364 4.5 13.5 4.5C11.636 4.5 10.125 6.01104 10.125 7.875C10.125 9.73896 11.636 11.25 13.5 11.25Z" stroke="white" stroke-width="2"/>
+                        <circle cx="10" cy="19" r="1" fill="white"/>
+                        <circle cx="17" cy="19" r="1" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="product-content">
+        <section class="product-hero">
+            <h1>Our Plants Collection</h1>
+            <p>Discover our carefully curated selection of beautiful and healthy plants</p>
+        </section>
+
+        <section class="product-filters">
+            <button class="filter-btn active" data-filter="all">All Plants</button>
+            <button class="filter-btn" data-filter="indoor">Indoor Plants</button>
+            <button class="filter-btn" data-filter="outdoor">Outdoor Plants</button>
+            <button class="filter-btn" data-filter="low-maintenance">Low Maintenance</button>
+        </section>
+
+        <section class="products-grid">
+            <div class="product-card">
+                <img src="images/cactus.jpg" alt="Cactus Plant">
+                <div class="product-info">
+                    <h3>Desert Cactus</h3>
+                    <p class="description">Hardy desert plant, perfect for beginners</p>
+                    <div class="care-info">
+                        <span><i class="fas fa-sun"></i> High Light</span>
+                        <span><i class="fas fa-tint"></i> Low Water</span>
+                    </div>
+                    <div class="price-cart">
+                        <span class="price">$15.99</span>
+                        <div class="button-group">
+                            <button onclick="addToCart({name: 'Desert Cactus', price: '15.99', image: 'images/cactus.jpg', description: 'Hardy desert plant, perfect for beginners'})" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                            <button onclick="buyNow({name: 'Desert Cactus', price: '15.99', image: 'images/cactus.jpg', description: 'Hardy desert plant, perfect for beginners'})" class="buy-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/dragontree.jpg" alt="Dragon Tree Plant">
+                <div class="product-info">
+                    <h3>Dragon Tree</h3>
+                    <p class="description">Elegant indoor tree with striking foliage</p>
+                    <div class="care-info">
+                        <span><i class="fas fa-sun"></i> Medium Light</span>
+                        <span><i class="fas fa-tint"></i> Moderate Water</span>
+                    </div>
+                    <div class="price-cart">
+                        <span class="price">$29.99</span>
+                        <div class="button-group">
+                            <button onclick="addToCart({name: 'Dragon Tree', price: '29.99', image: 'images/dragontree.jpg', description: 'Elegant indoor tree with striking foliage'})" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                            <button onclick="buyNow({name: 'Dragon Tree', price: '29.99', image: 'images/dragontree.jpg', description: 'Elegant indoor tree with striking foliage'})" class="buy-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/fern.jpg" alt="Fern Plant">
+                <div class="product-info">
+                    <h3>Boston Fern</h3>
+                    <p class="description">Lush green fern for humid environments</p>
+                    <div class="care-info">
+                        <span><i class="fas fa-sun"></i> Low Light</span>
+                        <span><i class="fas fa-tint"></i> High Water</span>
+                    </div>
+                    <div class="price-cart">
+                        <span class="price">$19.99</span>
+                        <div class="button-group">
+                            <button onclick="addToCart({name: 'Boston Fern', price: '19.99', image: 'images/fern.jpg', description: 'Lush green fern for humid environments'})" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                            <button onclick="buyNow({name: 'Boston Fern', price: '19.99', image: 'images/fern.jpg', description: 'Lush green fern for humid environments'})" class="buy-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/lavander.jpg" alt="Lavender Plant">
+                <div class="product-info">
+                    <h3>Lavender</h3>
+                    <p class="description">Fragrant herb with beautiful purple blooms</p>
+                    <div class="care-info">
+                        <span><i class="fas fa-sun"></i> Full Sun</span>
+                        <span><i class="fas fa-tint"></i> Low Water</span>
+                    </div>
+                    <div class="price-cart">
+                        <span class="price">$16.99</span>
+                        <div class="button-group">
+                            <button onclick="addToCart({name: 'Lavender', price: '16.99', image: 'images/lavander.jpg', description: 'Fragrant herb with beautiful purple blooms'})" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                            <button onclick="buyNow({name: 'Lavender', price: '16.99', image: 'images/lavander.jpg', description: 'Fragrant herb with beautiful purple blooms'})" class="buy-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/monstera.jpg" alt="Monstera Plant">
+                <div class="product-info">
+                    <h3>Monstera Deliciosa</h3>
+                    <p class="description">Tropical beauty with iconic split leaves</p>
+                    <div class="care-info">
+                        <span><i class="fas fa-sun"></i> Bright Indirect</span>
+                        <span><i class="fas fa-tint"></i> Moderate Water</span>
+                    </div>
+                    <div class="price-cart">
+                        <span class="price">$34.99</span>
+                        <div class="button-group">
+                            <button onclick="addToCart({name: 'Monstera Deliciosa', price: '34.99', image: 'images/monstera.jpg', description: 'Tropical beauty with iconic split leaves'})" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                            <button onclick="buyNow({name: 'Monstera Deliciosa', price: '34.99', image: 'images/monstera.jpg', description: 'Tropical beauty with iconic split leaves'})" class="buy-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/snake.jpg" alt="Snake Plant">
+                <div class="product-info">
+                    <h3>Snake Plant</h3>
+                    <p class="description">Air-purifying plant with striking upright leaves</p>
+                    <div class="care-info">
+                        <span><i class="fas fa-sun"></i> Any Light</span>
+                        <span><i class="fas fa-tint"></i> Low Water</span>
+                    </div>
+                    <div class="price-cart">
+                        <span class="price">$24.99</span>
+                        <div class="button-group">
+                            <button onclick="addToCart({name: 'Snake Plant', price: '24.99', image: 'images/snake.jpg', description: 'Air-purifying plant with striking upright leaves'})" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                            <button onclick="buyNow({name: 'Snake Plant', price: '24.99', image: 'images/snake.jpg', description: 'Air-purifying plant with striking upright leaves'})" class="buy-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/spiderplant.jpg" alt="Spider Plant">
+                <div class="product-info">
+                    <h3>Spider Plant</h3>
+                    <p class="description">Easy-care plant with arching leaves</p>
+                    <div class="care-info">
+                        <span><i class="fas fa-sun"></i> Moderate Light</span>
+                        <span><i class="fas fa-tint"></i> Moderate Water</span>
+                    </div>
+                    <div class="price-cart">
+                        <span class="price">$18.99</span>
+                        <div class="button-group">
+                            <button onclick="addToCart({name: 'Spider Plant', price: '18.99', image: 'images/spiderplant.jpg', description: 'Easy-care plant with arching leaves'})" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                            <button onclick="buyNow({name: 'Spider Plant', price: '18.99', image: 'images/spiderplant.jpg', description: 'Easy-care plant with arching leaves'})" class="buy-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/zzplants.jpg" alt="ZZ Plant">
+                <div class="product-info">
+                    <h3>ZZ Plant</h3>
+                    <p class="description">Low-maintenance plant with glossy leaves</p>
+                    <div class="care-info">
+                        <span><i class="fas fa-sun"></i> Low Light</span>
+                        <span><i class="fas fa-tint"></i> Low Water</span>
+                    </div>
+                    <div class="price-cart">
+                        <span class="price">$22.99</span>
+                        <div class="button-group">
+                            <button onclick="addToCart({name: 'ZZ Plant', price: '22.99', image: 'images/zzplants.jpg', description: 'Low-maintenance plant with glossy leaves'})" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                            <button onclick="buyNow({name: 'ZZ Plant', price: '22.99', image: 'images/zzplants.jpg', description: 'Low-maintenance plant with glossy leaves'})" class="buy-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/bonsai.jpg" alt="Bonsai Tree">
+                <div class="product-info">
+                    <h3>Japanese Bonsai</h3>
+                    <p class="description">Miniature artistically shaped traditional tree</p>
+                    <div class="care-info">
+                        <span><i class="fas fa-sun"></i> Bright Indirect</span>
+                        <span><i class="fas fa-tint"></i> Regular Care</span>
+                    </div>
+                    <div class="price-cart">
+                        <span class="price">$49.99</span>
+                        <div class="button-group">
+                            <button onclick="addToCart({name: 'Japanese Bonsai', price: '49.99', image: 'images/bonsai.jpg', description: 'Miniature artistically shaped traditional tree'})" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                            <button onclick="buyNow({name: 'Japanese Bonsai', price: '49.99', image: 'images/bonsai.jpg', description: 'Miniature artistically shaped traditional tree'})" class="buy-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Plant Grabber. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
